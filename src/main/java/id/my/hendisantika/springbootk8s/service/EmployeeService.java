@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by IntelliJ IDEA.
  * Project : springboot-k8s
@@ -38,5 +40,9 @@ public class EmployeeService {
         System.out.println("DEPARTMENT===> " + department.getDeptName());
         employee.setDepartment(department);
         entityManager.persist(employee);
+    }
+
+    public List<Employee> findByDepartmentDeptName(String departmentName) {
+        return employeeRepository.findByDepartmentDeptName(departmentName);
     }
 }
