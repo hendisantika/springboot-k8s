@@ -2,7 +2,6 @@ package id.my.hendisantika.springbootk8s.component;
 
 import org.springframework.stereotype.Component;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 
@@ -27,7 +26,7 @@ public class CreditCard implements Payment {
     }
 
 
-    public LocalDate transactionDate() throws ParseException {
+    public LocalDate transactionDate() {
         SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         return LocalDate.now();

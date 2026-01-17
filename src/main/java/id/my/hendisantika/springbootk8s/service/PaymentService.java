@@ -1,5 +1,6 @@
 package id.my.hendisantika.springbootk8s.service;
 
+import id.my.hendisantika.springbootk8s.component.Payment;
 import org.springframework.stereotype.Service;
 
 /**

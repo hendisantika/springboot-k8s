@@ -2,8 +2,8 @@ package id.my.hendisantika.springbootk8s.service;
 
 import id.my.hendisantika.springbootk8s.model.User;
 import id.my.hendisantika.springbootk8s.repository.UserRepository;
-import jakarta.persistence.Cacheable;
 import lombok.AllArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,5 +1,6 @@
 package id.my.hendisantika.springbootk8s.component;
 
+import id.my.hendisantika.springbootk8s.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

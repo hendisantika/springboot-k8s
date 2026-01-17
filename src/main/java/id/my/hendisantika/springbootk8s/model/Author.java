@@ -3,9 +3,9 @@ package id.my.hendisantika.springbootk8s.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.awt.print.Book;
 import java.util.List;
 
 /**
@@ -22,6 +22,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "author")
 public class Author {
