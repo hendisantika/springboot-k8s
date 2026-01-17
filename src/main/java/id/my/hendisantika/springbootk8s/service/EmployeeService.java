@@ -45,4 +45,27 @@ public class EmployeeService {
     public List<Employee> findByDepartmentDeptName(String departmentName) {
         return employeeRepository.findByDepartmentDeptName(departmentName);
     }
+
+    public Employee updateEmployee(Employee employee) {
+        Employee existingEmp = employeeRepository.findById(employee.getId()).orElseThrow(() -> new RuntimeException("Employee not found"));
+        if (employee.getFirstName() != null) {
+            existingEmp.setFirstName(employee.getFirstName());
+        } else {
+            existingEmp.setFirstName(existingEmp.getFirstName());
+        }
+
+        if ((employee.getLastName() != null)) {
+            existingEmp.setLastName(employee.getLastName());
+        } else {
+            existingEmp.setLastName(existingEmp.getLastName());
+        }
+
+        if ((employee.getSalary() != 0)) {
+            existingEmp.setSalary(employee.getSalary());
+        } else {
+            existingEmp.setSalary(existingEmp.getSalary());
+        }
+
+        return employeeRepository.save(existingEmp);
+    }
 }
