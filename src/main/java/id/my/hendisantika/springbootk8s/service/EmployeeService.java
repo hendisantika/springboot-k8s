@@ -72,4 +72,8 @@ public class EmployeeService {
     public List<Employee> getAllEmployee() {
         return employeeRepository.findAll();
     }
+
+    public void deleteEmployee(Long empId) {
+        employeeRepository.deleteById(empId);
+    }
 }
