@@ -1,9 +1,11 @@
 package id.my.hendisantika.springbootk8s.service;
 
+import id.my.hendisantika.springbootk8s.model.Employee;
 import id.my.hendisantika.springbootk8s.repository.EmployeeRepository;
 import jakarta.persistence.EntityManager;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by IntelliJ IDEA.
@@ -22,4 +24,10 @@ public class EmployeeService {
     private EmployeeRepository employeeRepository;
 
     private EntityManager entityManager;
+
+    @Transactional
+    public Employee createEmployee(Employee employee, Long departmentId) {
+        addEmployeeDept(employee, departmentId);
+        return employeeRepository.save(employee);
+    }
 }
