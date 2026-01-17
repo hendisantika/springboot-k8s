@@ -68,4 +68,8 @@ public class EmployeeService {
 
         return employeeRepository.save(existingEmp);
     }
+
+    public List<Employee> getAllEmployee() {
+        return employeeRepository.findAll();
+    }
 }
